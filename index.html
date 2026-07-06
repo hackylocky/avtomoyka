@@ -15,7 +15,6 @@
             overflow-x: hidden;
         }
         
-        /* Фон с повышенной затемнённостью */
         .hero {
             height: 100vh;
             min-height: 650px;
@@ -48,7 +47,7 @@
         }
         
         .logo-circle {
-            width: 98px; /* Увеличен ещё на 30% */
+            width: 98px;
             height: 98px;
             background: #000;
             border: 5px solid #fff;
@@ -216,20 +215,25 @@
 
     <script>
         function playVideo(vkLink) {
-            const videoHtml = `
+            // Пытаемся открыть через iframe (VK Video Player)
+            const iframeHtml = `
                 <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;" onclick="this.remove()">
                     <iframe
                         src="${vkLink}"
-                        style="width:100%; max-width:920px; height:100%; max-height:92vh; border:none;"
+                        style="width:100%;max-width:920px;height:100%;max-height:92vh;border:none;"
                         allow="autoplay; fullscreen; encrypted-media"
                         allowfullscreen>
                     </iframe>
                 </div>
             `;
-            document.body.insertAdjacentHTML('beforeend', videoHtml);
+            
+            try {
+                document.body.insertAdjacentHTML('beforeend', iframeHtml);
+            } catch (e) {
+                // Запасной вариант — открытие в новой вкладке
+                window.open(vkLink, '_blank');
+            }
         }
     </script>
 </body>
 </html>
-
-

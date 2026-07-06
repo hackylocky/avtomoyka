@@ -130,4 +130,106 @@
         }
         
         .video-title {
-            padding: 18px
+            padding: 18px;
+            text-align: center;
+            font-size: 1.18rem;
+            font-weight: 500;
+        }
+        
+        footer {
+            padding: 50px 20px;
+            text-align: center;
+            background: #000;
+            font-size: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.3rem; }
+            .header-info { flex-direction: column; gap: 16px; padding: 16px; top: 15px; }
+            .logo-circle { width: 88px; height: 88px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="header-info">
+            <div class="logo-circle">ХИМИКОВ<br>60</div>
+            <div>
+                <strong>Автомойка в Нефтянниках</strong><br>
+                <a href="https://2gis.ru/omsk/geo/70000001105688536" target="_blank" style="color:#fff; text-decoration:underline;">Открыть на 2ГИС</a>
+            </div>
+            <div>
+                <a href="tel:+79006782028" style="color:#fff; font-size:1.18rem; font-weight:500;">+7 900 678-20-28</a><br>
+                Ежедневно с 8:00 до 19:00<br>по предварительной записи
+            </div>
+        </div>
+
+        <div style="max-width: 92%; z-index: 2;">
+            <h1 class="main-title">АВТОМОБИЛЬНАЯ МОЙКА<br>ХИМИКОВ 60</h1>
+            <a href="tel:+79006782028" class="btn">ЗАПИСАТЬСЯ СЕЙЧАС</a>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services">
+        <h2 style="font-size:2.1rem; margin-bottom:35px;">Наши преимущества</h2>
+        <ul style="max-width:720px; margin:0 auto; text-align:left; font-size:1.25rem; line-height:1.65;">
+            <li>* Мойка кузова любой сложности: (двух/трехфазная мойка, удаление битума).</li>
+            <li>* Мойка днища, рамы, ДВС верх/низ.</li>
+            <li>* Уборка салона (от простой влажной до хим чистки с полным разбором).</li>
+        </ul>
+    </section>
+
+    <!-- Видео блок -->
+    <section class="video-grid">
+        <div class="video-card" onclick="playVideo('https://m.vk.com/clip420167498_456239056')">
+            <div class="video-thumb" style="background-image:url('https://via.placeholder.com/600x340/1a1a1a/ffffff?text=Комплексная+мойка')"></div>
+            <div class="video-title">Пример комплексной мойки</div>
+        </div>
+        
+        <div class="video-card" onclick="playVideo('https://m.vk.com/clip420167498_456239064')">
+            <div class="video-thumb" style="background-image:url('https://via.placeholder.com/600x340/1a1a1a/ffffff?text=После+OFF-ROAD')"></div>
+            <div class="video-title">После OFF-ROAD</div>
+        </div>
+    </section>
+
+    <!-- Дополнительные услуги -->
+    <section class="services" style="background:#1a1a1a;">
+        <h2 style="font-size:1.9rem; margin-bottom:25px;">НАШИ УСЛУГИ</h2>
+        <p style="max-width:720px; margin:0 auto 45px; font-size:1.22rem; line-height:1.5;">
+            Оклейка антигравийной пленкой, полировка любой сложности, удаление вмятин без покраски.
+        </p>
+        
+        <div class="video-card" style="margin:0 auto; max-width:380px;" onclick="playVideo('https://m.vk.com/clip420167498_456239062')">
+            <div class="video-thumb" style="background-image:url('https://via.placeholder.com/600x340/1a1a1a/ffffff?text=Дополнительные+работы')"></div>
+            <div class="video-title">Пример дополнительных работ</div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Автомойка Химиков 60</strong> — Нефтяники, Омск</p>
+        <p><a href="tel:+79006782028" style="color:#fff;">+7 900 678-20-28</a></p>
+        <p>Работаем ежедневно с 8:00 до 19:00</p>
+    </footer>
+
+    <script>
+        function playVideo(vkLink) {
+            const videoHtml = `
+                <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;" onclick="this.remove()">
+                    <iframe
+                        src="${vkLink}"
+                        style="width:100%; max-width:920px; height:100%; max-height:92vh; border:none;"
+                        allow="autoplay; fullscreen; encrypted-media"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', videoHtml);
+        }
+    </script>
+</body>
+</html>
+
+

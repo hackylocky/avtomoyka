@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомойка Химиков 60 — Нефтяники</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+            background: #0a0a0a;
+            overflow-x: hidden;
+        }
+        
+        /* Фон как на modnoe-mesto */
+        .hero {
+            height: 100vh;
+            min-height: 650px;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://modnoe-mesto.com/wp-content/uploads/hero-bg.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-info {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.85);
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 15px;
+            z-index: 10;
+            max-width: 95%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .logo-circle {
+            width: 58px;
+            height: 58px;
+            background: #000;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 1.1;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            line-height: 1.1;
+            margin: 20px 0 30px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #000;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 500;
+            text-decoration: none;
+            margin: 10px;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background: #ddd;
+        }
+        
+        .services {
+            padding: 60px 20px;
+            background: #111;
+            text-align: center;
+        }
+        
+        .video-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 40px 20px;
+            background: #0a0a0a;
+        }
+        
+        .video-card {
+            width: 100%;
+            max-width: 340px;
+            background: #1a1a1a;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .video-card:hover { transform: translateY(-10px); }
+        
+        .video-thumb {
+            height: 200px;
+            background: #333 center/cover;
+            position: relative;
+        }
+        .video-thumb::after {
+            content: '▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 50px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .video-title {
+            padding: 16px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            background: #000;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.2rem; }
+            .header-info { flex-direction: column; gap: 12px; padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="header-info">
+            <div class="logo-circle">ХИМИКОВ<br>60</div>
+            <div>
+                <strong>Автомойка в Нефтянниках</strong><br>
+                <a href="https://2gis.ru/omsk/geo/70000001105688536" target="_blank" style="color:#fff; text-decoration:underline;">Открыть на 2ГИС</a>
+            </div>
+            <div>
+                <a href="tel:+79006782028" style="color:#fff; font-size:1.1rem; font-weight:500;">+7 900 678-20-28</a><br>
+                Ежедневно с 8:00 до 19:00<br>по предварительной записи
+            </div>
+        </div>
+
+        <div style="max-width: 90%;">
+            <h1 class="main-title">АВТОМОБИЛЬНАЯ МОЙКА<br>ХИМИКОВ 60</h1>
+            <a href="tel:+79006782028" class="btn">ЗАПИСАТЬСЯ СЕЙЧАС</a>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services">
+        <h2 style="font-size:2rem; margin-bottom:30px;">Наши преимущества</h2>
+        <ul style="max-width:700px; margin:0 auto; text-align:left; font-size:1.25rem; line-height:1.6;">
+            <li>* Мойка кузова любой сложности: (двух/трехфазная мойка, удаление битума).</li>
+            <li>* Мойка днища, рамы, ДВС верх/низ.</li>
+            <li>* Уборка салона (от простой влажной до хим чистки с полным разбором).</li>
+        </ul>
+    </section>
+
+    <!-- Видео блок -->
+    <section class="video-grid">
+        <div class="video-card" onclick="playVideo('https://disk.yandex.ru/client/disk/%D0%9C%D0%9E%D0%99%D0%9A%D0%90?idApp=client&dialog=slider&idDialog=%2Fdisk%2F%D0%9C%D0%9E%D0%99%D0%9A%D0%90%2FHIGHLANDER.mp4')">
+            <div class="video-thumb" style="background-image:url('https://via.placeholder.com/600x340/1a1a1a/ffffff?text=Комплексная+мойка')"></div>
+            <div class="video-title">Пример комплексной мойки</div>
+        </div>
+        
+        <div class="video-card" onclick="playVideo('https://disk.yandex.ru/client/disk/%D0%9C%D0%9E%D0%99%D0%9A%D0%90?idApp=client&dialog=slider&idDialog=%2Fdisk%2F%D0%9C%D0%9E%D0%99%D0%9A%D0%90%2FJIMNY.mp4')">
+            <div class="video-thumb" style="background-image:url('https://via.placeholder.com/600x340/1a1a1a/ffffff?text=После+OFF-ROAD')"></div>
+            <div class="video-title">После OFF-ROAD</div>
+        </div>
+    </section>
+
+    <!-- Дополнительные услуги -->
+    <section class="services" style="background:#1a1a1a;">
+        <h2 style="font-size:1.8rem; margin-bottom:20px;">НАШИ УСЛУГИ</h2>
+        <p style="max-width:700px; margin:0 auto 40px; font-size:1.2rem;">Оклейка антигравийной пленкой, полировка любой сложности, удаление вмятин без покраски.</p>
+        
+        <div class="video-card" style="margin:0 auto; max-width:380px;" onclick="playVideo('https://disk.yandex.ru/client/disk/%D0%9C%D0%9E%D0%99%D0%9A%D0%90?idApp=client&dialog=slider&idDialog=%2Fdisk%2F%D0%9C%D0%9E%D0%99%D0%9A%D0%90%2FVEZEL.mp4')">
+            <div class="video-thumb" style="background-image:url('https://via.placeholder.com/600x340/1a1a1a/ffffff?text=Дополнительные+работы')"></div>
+            <div class="video-title">Пример дополнительных работ</div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>Автомойка Химиков 60</strong> — Нефтяники</p>
+        <p><a href="tel:+79006782028" style="color:#fff;">+7 900 678-20-28</a></p>
+        <p>Работаем ежедневно с 8:00 до 19:00</p>
+    </footer>
+
+    <script>
+        function playVideo(url) {
+            const videoHtml = `
+                <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#000;z-index:9999;display:flex;align-items:center;justify-content:center;" onclick="this.remove()">
+                    <video controls autoplay style="max-width:100%;max-height:100%;">
+                        <source src="${url}" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', videoHtml);
+        }
+    </script>
+</body>
+</html>

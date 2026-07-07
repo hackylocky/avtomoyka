@@ -15,35 +15,47 @@
             overflow-x: hidden;
         }
         
-        .hero {
+.hero {
     height: 100vh;
     min-height: 650px;
-    background: url('https://img.magnific.com/premium-photo/black-car-with-hood-up-word-snow-it_221812-1221.jpg?semt=ais_hybrid&w=740&q=80') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), 
+                url('https://img.magnific.com/premium-photo/black-car-with-hood-up-word-snow-it_221812-1221.jpg?semt=ais_hybrid&w=740&q=80') center/cover no-repeat;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     position: relative;
+    padding-top: 80px;           /* Добавили отступ сверху */
 }
-        
-        .header-info {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0,0,0,0.92);
-            padding: 14px 28px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 22px;
-            font-size: 15px;
-            z-index: 10;
-            max-width: 95%;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+
+.header-info {
+    position: absolute;
+    top: 15px;                   /* Чуть подняли */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.94);
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 14.5px;
+    z-index: 10;
+    max-width: 92%;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* Дополнительно увеличиваем отступ для заголовка */
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.85rem;
+    line-height: 1.05;
+    margin: 40px 0 45px;        /* Увеличили верхний отступ */
+    text-shadow: 0 5px 30px rgba(0,0,0,0.9);
+}
         
         .logo-circle {
             width: 98px;
